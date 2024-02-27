@@ -12,8 +12,8 @@ public class App
         String id;
         int idint;
         
-        System.out.println("Tervetulo Gifu-järjestelmään");
-        System.out.println("Mille Yliopistolle haluat ottaa järjestelmän käyttöön?");
+        System.out.println("Tervetuloa Gifu-järjestelmään");
+        System.out.println("Mille yliopistolle haluat ottaa järjestelmän käyttöön?");
         if (sc.hasNext()) {
             String university = sc.nextLine();
             Gifu gifu = new Gifu(university);    
@@ -44,7 +44,7 @@ public class App
                             break;
 
                         case 2:
-                            System.out.println("Anna opiskelijan nimi");
+                            System.out.println("Anna opiskelijan nimi:");
                             name = sc.nextLine();
                             System.out.println("Anna opiskelijan opiskelijanumero:");
                             id = sc.nextLine();
@@ -68,7 +68,7 @@ public class App
                             Course c1 = gifu.getCourse(idint);
 
                             gifu.listStudents();
-                            System.out.println("Minkä opiskelijan haluat lisätä kurssille syötä opiskelijan numero:");
+                            System.out.println("Minkä opiskelijan haluat lisätä kurssille? Syötä opiskelijan numero:");
                             idint = Integer.parseInt(sc.nextLine());
                             Student s1 = gifu.getStudent(idint);
 
@@ -108,7 +108,7 @@ public class App
 
                         case 8:
                             gifu.listStudents();
-                            System.out.println("Minkä opiskelijan arvosanan haluat listata? Syötä opiskelijan numero:");
+                            System.out.println("Minkä opiskelijan arvosanat haluat listata? Syötä opiskelijan numero:");
                             idint = Integer.parseInt(sc.nextLine());
                             Student s4 = gifu.getStudent(idint);
 
